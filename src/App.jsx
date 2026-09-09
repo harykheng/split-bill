@@ -69,8 +69,8 @@ export default function App() {
   const canShare = expenses.length > 0
 
   return (
-    <div className="min-h-screen py-8 px-3 flex justify-center print:py-0 print:px-0 print:block">
-      <div className="receipt w-full max-w-[410px] px-5 pt-8 pb-10 space-y-6 print:max-w-full print:px-0">
+    <div className="app-shell min-h-screen py-8 px-3 flex justify-center">
+      <div className="receipt w-full max-w-[410px] px-5 pt-8 pb-10 space-y-6">
         <div className="text-center">
           <p className="text-[10px] uppercase tracking-[0.2em] text-ink-soft">
             Nota Patungan
@@ -139,6 +139,10 @@ export default function App() {
             Share ke WhatsApp
           </button>
         </div>
+
+        <p className="print-only text-center text-[10px] text-ink-soft pt-2">
+          Dicetak {new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}
+        </p>
       </div>
     </div>
   )
